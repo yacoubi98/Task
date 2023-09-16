@@ -3,14 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root{
+    --color-D1884F: #D1884F;
+    --color-008AAA: #008AAA;
+    --color-3BBADB: #3BBADB;
+  }
 body {
     background-color: #fff;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 font-family: 'Rubik', sans-serif;
 }
-
 nav{
     height: 180px;
     display: flex;
@@ -24,21 +27,17 @@ nav{
     justify-content: space-between;
     font-size: 20px;
 }
-
 .nav-item{
    margin-left: 35px;
    cursor: pointer;
 }
-
 .nav-item:nth-child(1){
-    color: #D1884F;
+    color: var(--color-D1884F);
 }
-
 .nav-item i{
     margin-right: 8px;
     font-size: 25px;
 }
-
 main{
     height: calc(100vh - 180px);
     display: flex;
@@ -46,13 +45,12 @@ main{
 }
 .first-section{
    width: 50%;
-   /* background-color: rgb(232, 244, 248); */
    position: relative;
    margin-left: 240px;
 }
 .title{
     font-size: 20px;
-    color: rgb(103, 183, 230);
+    color: var(--color-3BBADB);
     position: absolute;
     padding-top: 70px;
 }
@@ -61,10 +59,10 @@ h1{
     position: absolute;
     padding-top: 140px;
     word-spacing: 4px;
-    color: #008AAA;
+    color: var(--color-008AAA);
 }
 h1 .engineer{
-    color: #D1884F;
+    color: var(--color-D1884F);
 }
 p{
     position: absolute;
@@ -73,11 +71,10 @@ p{
     color: black;
 }
 p .see{
-    color: #008AAA;
+    color: var(--color-008AAA);
 }
 button{
     padding: 10px 30px;
-    /* height: 30px; */
     font-size: 14px;
     margin-top: 380px;
     border-radius: 5px;
@@ -86,24 +83,240 @@ button{
     cursor: pointer;
 }
 button:nth-child(1){
-    background-color: #008AAA;
+    background-color: var(--color-008AAA);
     color: white;
-    box-shadow: 0 3px #b3cee8;
+    box-shadow: 0 3px var(--color-3BBADB);
 }
 button:nth-child(2){
-    border: 2px solid #008AAA;
+    border: 2px solid var(--color-008AAA);
     background-color: #fff;
-    color: #008AAA;
+    color: var(--color-008AAA);
 }
 .second-section{
-    /* background-color: #008AAA; */
     width: 50%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     left: 0;
  }
-
  .second-section img{
     height: 400px;
  }
+
+ @media (max-width: 990px) {
+    nav{
+        height: 140px;
+    }
+    .nav-items{
+        font-size: 15px;
+    }
+    .nav-item i{
+        margin-right: 7px;
+        font-size: 20px;
+    }
+    main{
+        height: calc(100vh - 140px);
+        padding-top: 0;
+        margin-top: -30px;
+    }
+    h1{
+        font-size: 38px;
+        padding-top: 140px;
+        word-spacing: 3px;
+    }
+    p{
+        padding-top: 240px;
+        width: 90%;
+    }
+    button{
+        padding: 10px 30px;
+        font-size: 14px;
+        margin-top: 330px;
+        margin-right: 18px;
+    }
+    .first-section{
+        width: 50%;
+        margin-left: 160px;
+    }
+    .title{
+        font-size: 18px;
+        padding-top: 100px;
+    }
+    .second-section{
+        padding-right: 50px;
+        padding-top: 90px;
+        align-items: start;
+     }
+     .second-section img{
+        height: 350px;
+     }
+}
+@media (max-width: 890px) {
+    nav{
+        height: 120px;
+    }
+    .nav-items{
+        font-size: 14px;
+    }
+    .nav-item i{
+        margin-right: 6px;
+        font-size: 18px;
+    }
+    main{
+        height: calc(100vh - 120px);
+        padding-top: 0;
+        margin-top: -40px;
+    }
+    h1{
+        font-size: 34px;
+        padding-top: 140px;
+        word-spacing: 2px;
+    }
+    p{
+        padding-top: 225px;
+    }
+    button{
+        padding: 8px 24px;
+        font-size: 13px;
+        margin-top: 320px;
+        margin-right: 16px;
+    }
+    .first-section{
+        margin-left: 150px;
+    }
+    .second-section{
+        padding-top: 90px;
+        align-items: start;
+     }
+     .second-section img{
+        height: 300px;
+     }
+}
+@media (max-width: 790px) {
+    nav{
+        height: 110px;
+    }
+    main{
+        height: calc(100vh - 110px);
+        padding-top: 0;
+        margin-top: -50px;
+    }
+    h1{
+        font-size: 30px;
+        padding-top: 140px;
+        word-spacing: 1px;
+    }
+    p{
+        padding-top: 215px;
+    }
+    button{
+        padding: 7px 22px;
+        font-size: 12px;
+        margin-top: 310px;
+        margin-right: 13px;
+    }
+    .first-section{
+        margin-left: 130px;
+    }
+     .second-section img{
+        height: 270px;
+     }
+}
+@media (max-width: 590px) {
+    nav{
+        height: 90px;
+    }
+    main{
+        height: calc(100vh - 90px);
+        padding-top: 0;
+        margin-top: -60px;
+    }
+    h1{
+        font-size: 18.5px;
+        padding-top: 140px;
+        word-spacing: 0px;
+    }
+    p{
+        padding-top: 190px;
+        font-size: 12px;
+        width: 100%;
+    }
+    button{
+        padding: 5px 10px;
+        font-size: 8px;
+        margin-top: 270px;
+        margin-right: 10px;
+    }
+    .title{
+        font-size: 15px;
+        padding-top: 110px;
+    }
+    .first-section{
+        margin-left: 130px;
+    }
+     .second-section img{
+        height: 210px;
+     }
+}
+@media (max-width: 500px) {
+    nav{
+        height: 80px;
+    }
+    .nav-items{
+        font-size: 12px;
+    }
+    .nav-item i{
+        margin-right: 3px;
+        font-size: 13px;
+    }
+    main{
+        height: calc(100vh - 80px);
+        padding-top: 0;
+        margin-top: -80px;
+    }
+    h1{
+        font-size: 15px;
+        padding-top: 120px;
+    }
+    p{
+        padding-top: 165px;
+        font-size: 11px;
+        width: 100%;
+    }
+    button{
+        padding: 5px 10px;
+        font-size:8px;
+        margin-top: 230px;
+        margin-right: 5px;
+    }
+    .title{
+        font-size: 11px;
+        padding-top: 100px;
+    }
+    .first-section{
+        margin-left: 60px;
+    }
+     .second-section img{
+        height: 180px;
+     }
+}
+@media (max-width: 430px) {
+  .first-section{
+        margin-left: 50px;
+    }
+}
+@media (max-width: 400px) {
+    .first-section{
+          margin-left: 30px;
+    }
+    .second-section img{
+        height: 150px;
+     }
+     p{
+        font-size: 10px;
+    }
+    button{
+        padding: 4px 8px;
+        font-size:7px;
+        margin-right: 3px;
+    }
+  }
